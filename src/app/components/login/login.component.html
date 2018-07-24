@@ -1,0 +1,11 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" (submit)="login($event)">
+      <input type="text" name="username" placeholder="username" [(ngModel)]="username" value="admin"/>
+      <input type="password" name="password" placeholder="password" [(ngModel)]="password" value="admin"/>
+      <span *ngIf="error" style="color: red">{{ error }}</span>
+      <button>login</button>
+      <small>Use predefined admin/admin credentials to log in.</small>
+    </form>
+  </div>
+</div>

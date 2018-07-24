@@ -1,0 +1,5 @@
+<h3 class="page__subtitle">Invoices List <small>({{ invoices.length }})</small></h3>
+<app-invoice-search (onSearch)="setSearchTerm($event)"></app-invoice-search>
+<div id="invoice-list" class="invoices__list">
+    <app-invoice-item *ngFor="let invoice of invoices" [invoice]="invoice"></app-invoice-item>
+</div>

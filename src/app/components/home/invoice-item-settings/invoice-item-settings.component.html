@@ -1,0 +1,12 @@
+<div class="settings">
+    <div class="settings__icons" *ngIf="isExpanded; else expand">
+        <span class="settings__icon icon__trash" title="Delete" (click)="delete($event)"></span>
+        <span class="settings__icon icon__duplicate" title="Duplicate" (click)="duplicate($event)"></span>
+        <span class="settings__icon icon__close" title="Close" (click)="setExpanded(false)"></span>
+    </div>
+    <ng-template #expand>
+        <div class="settings__icons">
+            <span class="settings__icon icon__gear" title="Show settings" (click)="setExpanded(true)"></span>
+        </div>
+    </ng-template>
+</div>

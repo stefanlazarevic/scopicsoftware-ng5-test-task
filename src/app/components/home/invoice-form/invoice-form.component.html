@@ -1,0 +1,12 @@
+
+<div id="invoice-form">
+    <form class="invoice__form" (submit)="onSubmit($event)" autocomplete="off">
+        <div class="form__group">
+            <input type="text" name="title" class="form__input" [(ngModel)]="title"/>
+            <button type="submit" class="form__button">Create</button>
+        </div>
+    </form>
+    <div *ngIf="title.length !== 0" class="invoice__preview">
+        <span>{{ title }}</span>
+    </div>
+</div>

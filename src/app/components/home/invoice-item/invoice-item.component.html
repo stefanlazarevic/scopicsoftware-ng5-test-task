@@ -1,0 +1,6 @@
+<div class="invoice__item">
+    <span>{{ invoice.title }}</span>
+    <app-invoice-item-settings (onDelete)="handleItemDeletion($event, invoice.id)"
+                               (onDuplicate)="handleItemDuplication($event, invoice.id)"
+    ></app-invoice-item-settings>
+</div>
